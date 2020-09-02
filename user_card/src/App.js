@@ -46,7 +46,6 @@ class App extends React.Component {
     axios
       .get(`https://api.github.com/users/${this.state.cardText}`)
       .then(res => {
-        console.log(this.state.cardText);
         this.setState({
           gCard: res.data,
           error: ''
@@ -64,7 +63,6 @@ class App extends React.Component {
     axios
       .get(`https://api.github.com/users/${this.state.cardText}/followers`)
       .then(res => {
-        console.log(this.state.cardtext);
         this.setState({
           followers: res.data
         });

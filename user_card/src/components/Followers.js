@@ -1,4 +1,6 @@
 import React from 'react'
+import uuid from 'uuid/v4'
+
 
 class Followers extends React.Component {
 
@@ -7,7 +9,7 @@ class Followers extends React.Component {
             <div className="followers">
                 <h2>Followers:</h2>
                 {this.props.followers.map(item => (
-                    <div className='gCardDisplay' >
+                    <div key={uuid()} className='gCardDisplay' >
                         <h2>{item.name}</h2>
                         <img width='100' height='100' src={item.avatar_url} alt='searched user follower avatar' />
                         <p>Username: {item.login}</p>
